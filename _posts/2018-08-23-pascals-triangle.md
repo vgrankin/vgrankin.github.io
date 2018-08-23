@@ -160,7 +160,7 @@ public class CombinationsWithoutRepetition
     }
     
     /**
-     * Get combination index by given actual combination
+     * Get combination index by given (actual) combination
      * 
      * @param n
      * @param r
