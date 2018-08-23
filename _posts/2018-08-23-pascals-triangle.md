@@ -108,6 +108,12 @@ Fig. 3.
 
 Fig. 3.1.
 
+And now we can try a more complex example:
+
+![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_4.jpg){:height="30%" width="30%"}
+
+Fig. 4.
+
 Here I’m just calculating costs for all the movements to end up with bricks positioned at last 
 combination, which is [6,6,6,6,6,6,6]. 
 
