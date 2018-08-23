@@ -2,7 +2,7 @@
 layout: archive
 permalink: /ai/
 title: "Data Science & ML Posts by Tags"
-author_profile: false
+author_profile: true
 ---
 
 {% include base_path %}
