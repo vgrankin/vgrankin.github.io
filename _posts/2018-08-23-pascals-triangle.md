@@ -142,6 +142,8 @@ calculate it’s value). All we need is a “coordinate” of the brick we want 
 
 ```java
 
+package my.package;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -156,7 +158,15 @@ public class CombinationsWithoutRepetition
             Arrays.fill(_cr[i], -1);
         }
     }
-
+    
+    /**
+     * Get combination index by given actual combination
+     * 
+     * @param n
+     * @param r
+     * @param numericCombination
+     * @return 
+     */
     public long getCombinationIndex(int n, int r, int[] numericCombination)
     {
         long sum = 0;
@@ -172,11 +182,22 @@ public class CombinationsWithoutRepetition
 
         return sum;
     }
-
+    
+    /**
+     * Get specified cell value out of Pascal Triangle's grid
+     * 
+     * @param rows
+     * @param cols
+     * @param rowIdx
+     * @param colIdx
+     * @return 
+     */
     private long _getCellValue(int rows, int cols, int rowIdx, int colIdx)
     {
-        int pascalTriangleLevel = (cols - 1 - colIdx) + (rows - 2 - rowIdx); // showing explicitly how level is calculated
-        int idxAtPascalTriangleLevel = (rows - 1) - rowIdx - 1; // explicitly showing how index at given level is calculated
+        // showing explicitly how level is calculated
+        int pascalTriangleLevel = (cols - 1 - colIdx) + (rows - 2 - rowIdx);
+        // explicitly showing how index at given level is calculated
+        int idxAtPascalTriangleLevel = (rows - 1) - rowIdx - 1;
 
         long cellValue = _comb(pascalTriangleLevel, idxAtPascalTriangleLevel);
 
@@ -184,8 +205,10 @@ public class CombinationsWithoutRepetition
     }
 
     /**
-     * This method is based on https://www.quora.com/What-are-some-efficient-algorithms-to-compute-nCr-in-Java P.S. this
-     * is a highly technical implementation. We could use simple Pascal triangle generation algorithm instead.
+     * This method is based on:
+     *      https://www.quora.com/What-are-some-efficient-algorithms-to-compute-nCr-in-Java 
+     * P.S. this is a highly technical implementation. 
+     * We could use simple Pascal triangle generation algorithm instead.
      */
     private long _comb(int n, int r)
     {
@@ -254,6 +277,12 @@ public class CombinationsWithoutRepetition
         return null;
     }
 }
+
+// usage example:
+//CombinationsWithoutRepetition c = new CombinationsWithoutRepetition();
+//System.out.println(c.getCombinationIndex(3, 3, new int[]{1,2,3})); // n = 3; r = 3; combination = [1,2,3]
+//int[] comb = c.getCombinationByIndex(3, 3, 8); // n = 3; r = 3; combination index = 8
+//System.out.println(Arrays.toString(comb));
 
 ```
 
