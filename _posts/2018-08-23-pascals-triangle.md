@@ -98,7 +98,7 @@ For example at step 10 you can see that 2nd brick on the left (of first row) has
 calculated by looking at sum of costs (gray color values) of its neighbor column on 
 the right -> (cost = 2) + down (cost = 1) -> 3. Same for all bricks/items.
 
-Here is another one:
+Here are some more examples:
 
 ![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_3_n=4r=3.jpg){:height="30%" width="30%"}
 
