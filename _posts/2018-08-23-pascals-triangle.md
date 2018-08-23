@@ -39,6 +39,6 @@ Now, according to combinations with repetition formula:
 
 ![combinations with repetition formula]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/combinations_with_repetition_formula.jpg)
 
-$$ \frac {(r + n - 1)!} {r!(n - 1)!}
+$$\frac {(r + n - 1)!} {r!(n - 1)!}$$
 
 
