@@ -1,6 +1,6 @@
 ---
-layout: archives
-permalink: /ai
+layout: archive
+permalink: /ai/
 title: "Data Science & ML Posts by Tags"
 author_profile: false
 ---
