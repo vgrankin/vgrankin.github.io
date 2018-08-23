@@ -140,6 +140,123 @@ calculate it’s value). All we need is a “coordinate” of the brick we want 
 
 #### Here is full implementation in Java:
 
+```java
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class CombinationsWithoutRepetition
+{
+    private static final int MAX_TRIANGLE_LEVELS = 50;
+    private final long[][] _cr = new long[MAX_TRIANGLE_LEVELS][MAX_TRIANGLE_LEVELS];
+
+    public CombinationsWithoutRepetition()
+    {
+        for (int i = 0; i < MAX_TRIANGLE_LEVELS; i++) {
+            Arrays.fill(_cr[i], -1);
+        }
+    }
+
+    public long getCombinationIndex(int n, int r, int[] numericCombination)
+    {
+        long sum = 0;
+
+        for (int colIdx = 0; colIdx < numericCombination.length; colIdx++) {
+            int maxRowIdx = numericCombination[colIdx] - 1;
+            for (int rowIdx = 0; rowIdx < maxRowIdx; rowIdx++) {
+                sum += _getCellValue(n, r, rowIdx, colIdx);
+            }
+        }
+
+        sum++;
+
+        return sum;
+    }
+
+    private long _getCellValue(int rows, int cols, int rowIdx, int colIdx)
+    {
+        int pascalTriangleLevel = (cols - 1 - colIdx) + (rows - 2 - rowIdx); // showing explicitly how level is calculated
+        int idxAtPascalTriangleLevel = (rows - 1) - rowIdx - 1; // explicitly showing how index at given level is calculated
+
+        long cellValue = _comb(pascalTriangleLevel, idxAtPascalTriangleLevel);
+
+        return cellValue;
+    }
+
+    /**
+     * This method is based on https://www.quora.com/What-are-some-efficient-algorithms-to-compute-nCr-in-Java P.S. this
+     * is a highly technical implementation. We could use simple Pascal triangle generation algorithm instead.
+     */
+    private long _comb(int n, int r)
+    {
+        if (_cr[n][r] != -1) {
+            return _cr[n][r];
+        }
+        if (r == 0 || n == r) {
+            return 1;
+        }
+        long ans = _comb(n - 1, r) + _comb(n - 1, r - 1);
+        return _cr[n][r] = ans;
+    }
+    
+    /**
+     * Prepares combination to be used with this class
+     * 
+     * @param combination Array of combination values as strings
+     * @return int array of sorted combination values
+     */
+    public int[] prepareCombination(ArrayList<Integer> combination)
+    {
+        int[] numericCombination = new int[combination.size()];
+        for (int i = 0; i < combination.size(); i++) {
+            Integer val = combination.get(i);
+            numericCombination[i] = val + 2;
+        }
+        
+        Arrays.sort(numericCombination);
+        
+        return numericCombination;
+    }
+        
+    /**
+     * Binary-search combination by given index
+     * 
+     * @param n
+     * @param r
+     * @param targetCombIdx
+     * @return 
+     */
+    public int[] getCombinationByIndex(int n, int r, long targetCombIdx)
+    {
+        int[] testComb = new int[r];        
+        int lowerBound = 0;
+        for (int i = 0; i < r; i++) {
+            
+            int upperBound = n;
+            
+            while (lowerBound <= upperBound) {
+                int mid = lowerBound + (upperBound - lowerBound) / 2;
+                for (int j = i; j < r; j++) {
+                    testComb[j] = mid;
+                }                                
+                long curCombIdx = getCombinationIndex(n, r, testComb);
+                if (curCombIdx < targetCombIdx) {                    
+                    lowerBound = mid + 1;                    
+                } else if (curCombIdx > targetCombIdx) {              
+                    upperBound = mid - 1;
+                    lowerBound = upperBound;
+                } else {
+                    return testComb;
+                }
+            }
+        }
+        
+        return null;
+    }
+}
+
+```
+
 As soon as Pascal’s lookup table (_cr) is filled, algorithm works pretty fast.
 
 In this class I also made a handy method to perform reverse operation which returns combination by given index (make sure though Pascal’s triangle you use is big enough – see MAX_TRIANGLE_LEVELS constant). Very useful in case you want to “unpack” any index.
