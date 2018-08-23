@@ -11,7 +11,7 @@ excerpt: "Data Science, Index by combination, Pascal's Triangle"
 category: data-science
 ---
 
-#### Problem statement
+#### Problem statement:
 
 Recently I had a requirement to get index for a given combination out of a list of given combinations 
 with repetition sequence. 
@@ -39,17 +39,13 @@ Now, according to combinations with repetition formula:
 
 ![combinations with repetition formula]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/combinations_with_repetition_formula.jpg)
 
-$$ \frac {(r + n - 1)!} {r!(n - 1)!}
-
-$$x = y + 2$$
-
 we need to see a list of 92378 combinations. Of course we can generate all these combinations and 
 compare with combination we want to find index of. But it is extremely inefficient and even unreal 
 if we have high n and r values (let’s say n=20 and r=20).
 
 So the question is how to find combination’s index just by knowing n, r and combination itself.
 
-#### Here is my investigation and a visual approach to this problem
+#### Here is my investigation and a visual approach to this problem:
 
 At first I tried to understand how combinations work and how sequence is produced. Here is for 
 example how n=3, r=3 is progressing:
@@ -87,3 +83,66 @@ The total price for step 7 is 6 because
 So basically combination’s index is its total cost in that table (cost of preceding movements). If we 
 want to start from index 1, we just add 1 to total cost, so index for combination in step 7 will 
 be 7 of course.
+
+Let’s see another example, n=3, r=4:
+
+![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_2_n=3r=4.jpg){:height="30%" width="30%"}
+
+Fig. 2.
+
+I’m sure you can figure out the pattern on how to fill those costs. It goes like this. You look at 
+particular brick/item and calculate its cost by adding up all costs in preceding column like 
+this -> look on the first brick on the right and go down while accumulating costs sum. 
+
+For example at step 10 you can see that 2nd brick on the left (of first row) has cost 3 and it is 
+calculated by looking at sum of costs (gray color values) of its neighbor column on 
+the right -> (cost = 2) + down (cost = 1) -> 3. Same for all bricks/items.
+
+Here is another one:
+
+![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_3_n=4r=3.jpg){:height="30%" width="30%"}
+
+Fig. 3.
+
+![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_3_2.jpg){:height="30%" width="30%"}
+
+Fig. 3.1.
+
+Here I’m just calculating costs for all the movements to end up with bricks positioned at last 
+combination, which is [6,6,6,6,6,6,6]. 
+
+Now look at these numbers, they are interesting and there is a lot of beautiful correlations between 
+these costs. I clearly saw some interesting patterns. So I tried to google this for example: 
+“6 10 15 21 28” and found things like “Triangular number”, “Tetrahedral number”, “Perfect Power” 
+and also “Pascal's triangle” which is EXACTLY what you see as costs in the bricks above. 
+We invented a bicycle. Amazing!  :D
+
+Pascal’s Triangle discovery was important because now I could for example create a lookup table 
+for all these costs and just add them up to get index of any combination! It turns out it is very 
+easy to generate Pascal’s triangle for any amount of rows. Also you can find cost of any specific 
+brick by nCr formula (look for details here: http://www.mathsisfun.com/pascals-triangle.html)
+
+So let’s say we have n=6, r=7 and we want to get index of [2,2,3,3,4,4,5]
+
+To do so we need to calculate and sum up costs of all bricks above occupied positions. So from 
+left to right it will be (210) + (126) + (70 + 35) + (35 + 20) + (15 + 10 + 6) + (5 + 4 + 3) + 
+(1 + 1 + 1 + 1) = 543. So index will be 543 + 1 = 544.
+
+Again we know cost of each brick simply by looking at Pascal’s triangle (which then we need to 
+generate first) or we by using rCn formula (which ironically also may use Pascal’s triangle to 
+calculate it’s value). All we need is a “coordinate” of the brick we want inside Pascal’s triangle.
+
+#### Here is full implementation in Java:
+
+As soon as Pascal’s lookup table (_cr) is filled, algorithm works pretty fast.
+
+In this class I also made a handy method to perform reverse operation which returns combination by given index (make sure though Pascal’s triangle you use is big enough – see MAX_TRIANGLE_LEVELS constant). Very useful in case you want to “unpack” any index.
+
+I’m sure there are more efficient and optimal ways to do what I described here, but unfortunately I couldn’t find it so I had to investigate everything myself. Hopefully it will be useful to you as well!
+
+In my next article I will describe how index by given combination for combinations-with-repetition can
+be useful in data science to potentially get better results at classification problems! Also, 
+theoretically this Pascal's triangle method can be used to increase training speed of your deep 
+neural network. So stay tuned for that and see you in the next article! :)
+
+Cheers!
