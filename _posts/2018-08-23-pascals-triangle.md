@@ -59,4 +59,29 @@ example how n=3, r=3 is progressing:
 state. Each state is a combination in that combinations box. Combination is in black color, 
 cost of the cell/brick/item movement is in gray. There are 10 possible states.
 
+If we think of the bricks/items movement above in terms of cost we will see that it is cheapest for 
+the right-most item to move down and it is more expensive for the items located on the left and it’s 
+most expensive to move down for the left-most item (because it always waits until all preceding items 
+moved first). 
 
+For example 3rd item (right-most) is moving down effortlessly (step 2 and 3). The price is 1 for 
+each movement down.
+ 
+Now to move middle item down (as you can see it moved 1 position down at step 4) we first had to move 
+3rd item 2 positions down. So the cost of movement 1 position down for the 2nd item in this case was 2. 
+
+Now if you look at step 6 for example, you will see that second movement down of the 2nd item costs 
+1 (not 2 like in first movement case). This is because right-most item could move only 1 brick down 
+(because in combinations with repetition any item on the right is >= item on the left, so for example 
+we cannot have combination such as [1,2,1] or [2,1,2] etc., only ascending order is allowed).
+
+So for example the total price is 0 at step 1 (no movement was taken)
+
+The total price for step 7 is 6 because 
+-	it was necessary to make 3 movements to shift left-most item down (3 because it was 2 shifts down for the right-most item and 1 shift down for the middle one so 3 in total)
+-	it was necessary to make 2 movements to shift middle item down (because we first needed to move right-most item 2 positions down to “allow” middle item to move down).
+-	and right-most item adds 1 unit of cost as well because it is shifted 1 position down to keep ascending order of the combination
+
+So basically combination’s index is its total cost in that table (cost of preceding movements). If we 
+want to start from index 1, we just add 1 to total cost, so index for combination in step 7 will 
+be 7 of course.
