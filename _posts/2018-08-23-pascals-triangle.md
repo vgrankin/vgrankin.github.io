@@ -41,6 +41,8 @@ Now, according to combinations with repetition formula:
 
 $$ \frac {(r + n - 1)!} {r!(n - 1)!}
 
+$$x = y + 2$$
+
 we need to see a list of 92378 combinations. Of course we can generate all these combinations and 
 compare with combination we want to find index of. But it is extremely inefficient and even unreal 
 if we have high n and r values (let’s say n=20 and r=20).
@@ -53,7 +55,7 @@ At first I tried to understand how combinations work and how sequence is produce
 example how n=3, r=3 is progressing:
 
 
-![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_1_n=3r=3.jpg)
+![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_1_n=3r=3.jpg){:height="30%" width="30%"}
 
 **Fig. 1.** Here we have all states of let’s call it a “combinations box”. Each box contains 
 state. Each state is a combination in that combinations box. Combination is in black color, 
