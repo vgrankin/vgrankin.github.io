@@ -11,8 +11,8 @@ excerpt: "Data Science, Index by combination, Pascal's Triangle"
 category: data-science
 ---
 
-Index by combination using Pascal’s triangle. Get index by combination. Java index by combination. 
-Java combination index. Combination index visual explanation. Get combination position. Calculate combination index. Combinations with repetition index. Calculate combination index using Pascal Triangle. How to create Pascal Triangle. How Pascal Triangle was invented. Pascal triangle explained. Pascal‘s triangle actual meaning. Combinations with repetition to index.
+#### Problem statement
+
 Recently I had a requirement to get index for a given combination out of a list of given combinations 
 with repetition sequence. 
 
@@ -41,4 +41,21 @@ Now, according to combinations with repetition formula:
 
 $$\frac {(r + n - 1)!} {r!(n - 1)!}$$
 
+we need to see a list of 92378 combinations. Of course we can generate all these combinations and 
+compare with combination we want to find index of. But it is extremely inefficient and even unreal 
+if we have high n and r values (let’s say n=20 and r=20).
+
+So the question is how to find combination’s index just by knowing n, r and combination itself.
+
+#### Here is my investigation and a visual approach to this problem
+
+At first I tried to understand how combinations work and how sequence is produced. Here is for 
+example how n=3, r=3 is progressing:
+
+
+![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pic_1_n=3r=3.jpg)
+
+**Fig. 1.** Here we have all states of let’s call it a “combinations box”. Each box contains 
+state. Each state is a combination in that combinations box. Combination is in black color, 
+cost of the cell/brick/item movement is in gray. There are 10 possible states.
 
