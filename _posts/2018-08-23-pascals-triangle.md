@@ -39,7 +39,7 @@ Now, according to combinations with repetition formula:
 
 ![combinations with repetition formula]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/combinations_with_repetition_formula.jpg)
 
-$$\frac {(r + n - 1)!} {r!(n - 1)!}$$
+$$ \frac {(r + n - 1)!} {r!(n - 1)!}
 
 we need to see a list of 92378 combinations. Of course we can generate all these combinations and 
 compare with combination we want to find index of. But it is extremely inefficient and even unreal 
@@ -53,9 +53,10 @@ At first I tried to understand how combinations work and how sequence is produce
 example how n=3, r=3 is progressing:
 
 
-![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pic_1_n=3r=3.jpg)
+![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_1_n=3r=3.jpg)
 
 **Fig. 1.** Here we have all states of let’s call it a “combinations box”. Each box contains 
 state. Each state is a combination in that combinations box. Combination is in black color, 
 cost of the cell/brick/item movement is in gray. There are 10 possible states.
+
 
