@@ -34,8 +34,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-08-23-pascals-triangle.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="496">
-                <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
+              <first_editor relative-caret-position="303">
+                <caret line="84" selection-start-line="84" selection-end-line="84" />
               </first_editor>
               <second_editor />
             </state>
@@ -210,12 +210,12 @@
       <option name="presentableId" value="Default" />
       <updated>1535021764506</updated>
       <workItem from="1535021767544" duration="13049000" />
-      <workItem from="1535096724175" duration="5699000" />
+      <workItem from="1535096724175" duration="6971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18748000" />
+    <option name="totallyTimeSpent" value="20020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -381,8 +381,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-08-23-pascals-triangle.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="496">
-            <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
+          <first_editor relative-caret-position="303">
+            <caret line="84" selection-start-line="84" selection-end-line="84" />
           </first_editor>
           <second_editor />
         </state>
