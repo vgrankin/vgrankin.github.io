@@ -5,7 +5,7 @@ tags: [pascal triangle, data science, combinations with repetition,
 index by combination, get index by combination, java index by combination, java combination index, 
 combination index visual explanation, get combination position, calculate combination index, 
 combinations with repetition index, calculate combination index using Pascal Triangle,
- how to create Pascal Triangle, how Pascal's Triangle was invented, Pascal triangle explained, 
+ how to create Pascal Triangle, how Pascal's Triangle was invented, Pascal's triangle explained, 
  Pascal‘s triangle actual meaning, combinations with repetition to index]
 excerpt: "Data Science, Index by combination, Pascal's Triangle"
 category: data-science
