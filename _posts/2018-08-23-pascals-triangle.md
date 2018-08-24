@@ -12,13 +12,13 @@ category: data-science
 classes: wide
 ---
 
-### Problem statement:
+## Problem statement:
 
-Some time ago I had a requirement to get index for a given combination out of a list of given combinations 
-with repetition sequence. 
+Some time ago I had a requirement to get index/location for a given combination out of a list of given "combinations 
+with repetition" sequence. 
 
 For example if we have n  = 3 (number of things to choose from) and r = 3 (we choose r of them) 
-we have 10 combinations, which means we have the following table:
+then we have 10 combinations total, which means we have the following table:
 
 ```
 [1, 1, 1]
@@ -34,7 +34,9 @@ we have 10 combinations, which means we have the following table:
 ```
 
 Let’s say I’m interested in combination [2, 2, 2] so looking at table above we can tell it’s index 
-is 7 (starting from 1). That was easy, but what if we have n =10, r=10 combinations set? 
+is 7 (starting from 1). That was easy, because we can just use brute force and iterate over all possible combinations in
+this list until currently iterated combination matches with the one we are interested in. But what if we have n =10, 
+r=10 combinations set? In this case it becomes much more expensive to use brute force comparison. 
 
 Now, according to combinations with repetition formula:
 
@@ -46,7 +48,7 @@ if we have high n and r values (let’s say n=20 and r=20).
 
 So the question is how to find combination’s index just by knowing n, r and combination itself.
 
-#### Here is my investigation and a visual approach to this problem:
+## Here is my investigation and a visual approach to this problem:
 
 At first I tried to understand how combinations work and how sequence is produced. Here is for 
 example how n=3, r=3 is progressing:
@@ -139,7 +141,7 @@ Again we know cost of each brick simply by looking at Pascal’s triangle (which
 generate first) or we by using rCn formula (which ironically also may use Pascal’s triangle to 
 calculate it’s value). All we need is a “coordinate” of the brick we want inside Pascal’s triangle.
 
-### Here is full implementation in Java:
+## Here is full implementation in Java:
 
 ```java
 

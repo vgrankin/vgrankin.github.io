@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7236ea90-dfcb-4c5c-9b58-c295462aeee9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/_posts/2018-08-23-pascals-triangle.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-08-23-pascals-triangle.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/minimal-mistakes/_archive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/minimal-mistakes/_archive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/minimal-mistakes/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/minimal-mistakes/_page.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +34,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-08-23-pascals-triangle.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="187">
-                <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <first_editor relative-caret-position="646">
+                <caret line="38" column="97" selection-start-line="38" selection-start-column="97" selection-end-line="38" selection-end-column="97" />
               </first_editor>
               <second_editor />
             </state>
@@ -115,7 +113,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>tag</find>
-      <find />
+      <find>Pascal triangle explained</find>
       <find>.archive</find>
       <find>.page</find>
       <find>Layo</find>
@@ -212,12 +210,12 @@
       <option name="presentableId" value="Default" />
       <updated>1535021764506</updated>
       <workItem from="1535021767544" duration="13049000" />
-      <workItem from="1535096724175" duration="2743000" />
+      <workItem from="1535096724175" duration="4219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15792000" />
+    <option name="totallyTimeSpent" value="17268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -383,8 +381,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-08-23-pascals-triangle.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="187">
-            <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <first_editor relative-caret-position="646">
+            <caret line="38" column="97" selection-start-line="38" selection-start-column="97" selection-end-line="38" selection-end-column="97" />
           </first_editor>
           <second_editor />
         </state>
