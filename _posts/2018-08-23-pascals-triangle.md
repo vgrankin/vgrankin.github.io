@@ -95,14 +95,15 @@ Let’s see another example, n=3, r=4:
 
 **Fig. 2.**
 
-I’m sure you can figure out the pattern on how to fill those costs. It goes like this. You look at 
-particular brick/item/cell and calculate its cost by adding up all costs in preceding column's cells 
-(excluding bottom-most cell) like this -> look at the cell on the right (neighbour) on the same level 
-and go down while accumulating costs sum. 
+I’m sure you can figure out the pattern on how to fill those costs. Here is an algorithm in a nutshell. 
+It goes like this. You look at particular brick/item/cell and calculate its cost by adding up all costs in 
+preceding column's cells (excluding bottom-most cell) like this -> look at the cell on the right (neighbour) 
+on the same level and go down while level is < bottommost level, accumulating costs sum. 
 
 For example at step 10 you can see that 2nd cell on the left of first row has cost 3 and it is 
 calculated by looking at sum of costs (gray color values) of its neighbor column on 
-the right -> (cost = 2) + down (cost = 1) -> 3. Same for all bricks/items.
+the right -> (cost = 2) + down (cost = 1) -> 3. Same for all bricks/items/cells. And as we discussed, our base
+case - rightmost column's cell movement cost is simply 1.
 
 Here are some more examples:
 
@@ -124,9 +125,9 @@ Here I’m just calculating costs for all the movements to end up with bricks po
 combination, which is [6,6,6,6,6,6,6]. 
 
 Now look at these numbers, they are interesting and there is a lot of beautiful correlations between 
-these costs. I clearly saw some interesting patterns. So I tried to google this for example: 
-“6 10 15 21 28” and found things like “Triangular number”, “Tetrahedral number”, “Perfect Power” 
-and also “Pascal's triangle” which is EXACTLY what you see as costs in the bricks above. 
+these costs. I clearly saw some interesting patterns. It made me curious. So I tried to google this 
+for example: “6 10 15 21 28” and found things like “Triangular number”, “Tetrahedral number”, 
+“Perfect Power” and also “Pascal's triangle” which is EXACTLY what you see as costs in the bricks above. 
 We invented a bicycle. Amazing!  :D
 
 Pascal’s Triangle discovery was important because now I could for example create a lookup table 
