@@ -21,13 +21,13 @@ For example if we have n  = 3 (number of things to choose from) and r = 3 (we ch
 then we have 10 combinations total, which means we have the following table:
 
 ```
-[1, 1, 1]
+[1, 1, 1] # index = 1
 [1, 1, 2]
 [1, 1, 3]
 [1, 2, 2]
 [1, 2, 3]
 [1, 3, 3]
-[2, 2, 2]
+[2, 2, 2] # index = 7
 [2, 2, 3]
 [2, 3, 3]
 [3, 3, 3]
