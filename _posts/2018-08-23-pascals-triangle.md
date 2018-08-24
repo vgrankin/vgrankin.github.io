@@ -87,8 +87,7 @@ The total price for step 7 is 6 because:
 -	and right-most item adds 1 unit of cost as well because it is shifted 1 position down to keep ascending order of the combination
 
 So basically combination’s index is its total cost in that table (cost of preceding movements, 
-gray color values in Fig. 1.). If we want to start from index 1, we just add 1 to total cost, so index for 
-combination in step 7 will be 7 of course.
+gray color values in Fig. 1.). If we want to start from index 1, we just add 1 to total cost.
 
 Let’s see another example, n=3, r=4:
 
@@ -97,10 +96,11 @@ Let’s see another example, n=3, r=4:
 **Fig. 2.**
 
 I’m sure you can figure out the pattern on how to fill those costs. It goes like this. You look at 
-particular brick/item and calculate its cost by adding up all costs in preceding column like 
-this -> look on the first brick on the right and go down while accumulating costs sum. 
+particular brick/item and calculate its cost by adding up all costs in preceding column's cells 
+(exluding bottom-most cell) like this -> look at the first brick on the right (neighbour) and go down while 
+accumulating costs sum. 
 
-For example at step 10 you can see that 2nd brick on the left (of first row) has cost 3 and it is 
+For example at step 10 you can see that 2nd cell on the left of first row has cost 3 and it is 
 calculated by looking at sum of costs (gray color values) of its neighbor column on 
 the right -> (cost = 2) + down (cost = 1) -> 3. Same for all bricks/items.
 
