@@ -11,7 +11,7 @@ excerpt: "Data Science, Index by combination, Pascal's Triangle"
 category: data-science
 ---
 
-#### Problem statement:
+### Problem statement:
 
 Recently I had a requirement to get index for a given combination out of a list of given combinations 
 with repetition sequence. 
@@ -138,7 +138,7 @@ Again we know cost of each brick simply by looking at Pascal’s triangle (which
 generate first) or we by using rCn formula (which ironically also may use Pascal’s triangle to 
 calculate it’s value). All we need is a “coordinate” of the brick we want inside Pascal’s triangle.
 
-#### Here is full implementation in Java:
+### Here is full implementation in Java:
 
 ```java
 
