@@ -125,10 +125,10 @@ Here I’m just calculating costs for all the movements to end up with bricks po
 combination, which is [6,6,6,6,6,6,6]. 
 
 Now look at these numbers, they are interesting and there is a lot of beautiful correlations between 
-these costs. I clearly saw some interesting patterns. It made me curious. So I tried to google this 
-for example: “6 10 15 21 28” and found things like “Triangular number”, “Tetrahedral number”, 
-“Perfect Power” and also “Pascal's triangle” which is EXACTLY what you see as costs in the bricks above. 
-We invented a bicycle. Amazing!  :D
+these costs. I clearly saw some interesting patterns. It made me curious about what we are dealing with here. 
+So I tried to google this for example: “6 10 15 21 28” and found things like “Triangular number”, 
+“Tetrahedral number”, “Perfect Power” and also “Pascal's triangle” which is EXACTLY what you see as costs 
+in the bricks above. We invented a bicycle. Amazing!  :D
 
 Pascal’s Triangle discovery was important because now I could for example create a lookup table 
 for all these costs and just add them up to get index of any combination! It turns out it is very 
