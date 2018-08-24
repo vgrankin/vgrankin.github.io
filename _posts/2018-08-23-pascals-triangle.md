@@ -36,9 +36,9 @@ then we have 10 combinations total, which means we have the following table:
 Let’s say I’m interested in combination [2, 2, 2] so looking at table above we can tell it’s index 
 is 7 (starting from 1). That was easy, because we can just use brute force and iterate over all possible combinations in
 this list until currently iterated combination matches with the one we are interested in. But what if we have n =10, 
-r=10 combinations set? In this case it becomes much more expensive to use brute force comparison. 
+r=10 combinations set?
 
-Now, according to combinations with repetition formula:
+According to combinations with repetition formula:
 
 ![combinations with repetition formula]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/combinations_with_repetition_formula.jpg)
 
