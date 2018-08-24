@@ -46,7 +46,8 @@ we need to see a list of 92378 combinations. Of course we can generate all these
 compare with combination we want to find index of. But it is extremely inefficient and even unreal 
 if we have high n and r values (let’s say n=20 and r=20).
 
-So the question is how to find combination’s index just by knowing n, r and combination itself.
+So the question is how to find combination’s index (in context of combinations with repetition) just by knowing n, r 
+and combination itself.
 
 ## Here is my investigation and a visual approach to this problem:
 
