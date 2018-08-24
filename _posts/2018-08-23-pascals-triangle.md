@@ -13,7 +13,7 @@ category: data-science
 
 ### Problem statement:
 
-Recently I had a requirement to get index for a given combination out of a list of given combinations 
+Some time ago I had a requirement to get index for a given combination out of a list of given combinations 
 with repetition sequence. 
 
 For example if we have n  = 3 (number of things to choose from) and r = 3 (we choose r of them) 
