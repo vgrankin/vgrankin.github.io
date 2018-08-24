@@ -162,8 +162,8 @@ public class CombinationsWithoutRepetition
     /**
      * Get combination index by given (actual) combination
      * 
-     * @param n
-     * @param r
+     * @param n (number of things to choose from) 
+     * @param r (we choose r of those things)
      * @param numericCombination
      * @return 
      */
@@ -288,9 +288,12 @@ public class CombinationsWithoutRepetition
 
 As soon as Pascal’s lookup table (_cr) is filled, algorithm works pretty fast.
 
-In this class I also made a handy method to perform reverse operation which returns combination by given index (make sure though Pascal’s triangle you use is big enough – see MAX_TRIANGLE_LEVELS constant). Very useful in case you want to “unpack” any index.
+In this class I also made a handy method to perform reverse operation which returns combination by given index 
+(make sure though Pascal’s triangle you use is big enough – see MAX_TRIANGLE_LEVELS constant). Very useful 
+in case you want to “unpack” any index.
 
-I’m sure there are more efficient and optimal ways to do what I described here, but unfortunately I couldn’t find it so I had to investigate everything myself. Hopefully it will be useful to you as well!
+I’m sure there are more efficient and optimal ways to do what I described here, but unfortunately I couldn’t find it 
+so I had to investigate everything myself. Hopefully it will be useful to you as well!
 
 In my next article I will describe how index by given combination for combinations-with-repetition can
 be useful in data science to potentially get better results at classification problems! Also, 
