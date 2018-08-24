@@ -133,16 +133,17 @@ in the bricks above. We invented a bicycle. Amazing!  :D
 Pascal’s Triangle discovery was important because now I could for example create a lookup table 
 for all these costs and just add them up to get index of any combination! It turns out it is very 
 easy to generate Pascal’s triangle for any amount of rows. Also you can find cost of any specific 
-brick by nCr formula (look for details here: http://www.mathsisfun.com/pascals-triangle.html)
+brick by nCr formula (look for details here: [http://www.mathsisfun.com/pascals-triangle.html]({{ "http://www.mathsisfun.com/pascals-triangle.html" }}))
 
 So let’s say we have n=6, r=7 and we want to get index of [2,2,3,3,4,4,5]
 
 To do so we need to calculate and sum up costs of all bricks above occupied positions. So from 
 left to right it will be (210) + (126) + (70 + 35) + (35 + 20) + (15 + 10 + 6) + (5 + 4 + 3) + 
-(1 + 1 + 1 + 1) = 543. So index will be 543 + 1 = 544.
+(1 + 1 + 1 + 1) = 543. So index will be 543 + 1 = 544 (to get index we add +1 because 1st combination's 
+cost is 0). (see Fig. 4.)
 
 Again we know cost of each brick simply by looking at Pascal’s triangle (which then we need to 
-generate first) or we by using rCn formula (which ironically also may use Pascal’s triangle to 
+generate first) or by using rCn formula (which ironically also may use Pascal’s triangle to 
 calculate it’s value). All we need is a “coordinate” of the brick we want inside Pascal’s triangle.
 
 ## Here is full implementation in Java:
@@ -206,6 +207,7 @@ public class CombinationsWithoutRepetition
         // explicitly showing how index at given level is calculated
         int idxAtPascalTriangleLevel = (rows - 1) - rowIdx - 1;
 
+        // get cell-value by given "coordinates" within Pascal's triangle grid
         long cellValue = _comb(pascalTriangleLevel, idxAtPascalTriangleLevel);
 
         return cellValue;
