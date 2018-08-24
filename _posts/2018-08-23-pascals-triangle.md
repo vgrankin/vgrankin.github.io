@@ -96,9 +96,9 @@ Let’s see another example, n=3, r=4:
 **Fig. 2.**
 
 I’m sure you can figure out the pattern on how to fill those costs. It goes like this. You look at 
-particular brick/item and calculate its cost by adding up all costs in preceding column's cells 
-(exluding bottom-most cell) like this -> look at the first brick on the right (neighbour) and go down while 
-accumulating costs sum. 
+particular brick/item/cell and calculate its cost by adding up all costs in preceding column's cells 
+(excluding bottom-most cell) like this -> look at the cell on the right (neighbour) on the same level 
+and go down while accumulating costs sum. 
 
 For example at step 10 you can see that 2nd cell on the left of first row has cost 3 and it is 
 calculated by looking at sum of costs (gray color values) of its neighbor column on 
