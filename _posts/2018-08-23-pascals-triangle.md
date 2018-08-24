@@ -42,7 +42,7 @@ According to combinations with repetition formula:
 
 ![combinations with repetition formula]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/combinations_with_repetition_formula.jpg)
 
-we need to see a list of 92378 combinations. Of course we can generate all these combinations and 
+at worst case we need to see a list of 92378 combinations. Of course we can generate all these combinations and 
 compare with combination we want to find index of. But it is extremely inefficient and even unreal 
 if we have high n and r values (let’s say n=20 and r=20).
 
@@ -92,7 +92,7 @@ Let’s see another example, n=3, r=4:
 
 ![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_2_n=3r=4.jpg){:height="30%" width="30%"}
 
-Fig. 2.
+**Fig. 2.**
 
 I’m sure you can figure out the pattern on how to fill those costs. It goes like this. You look at 
 particular brick/item and calculate its cost by adding up all costs in preceding column like 
@@ -106,17 +106,17 @@ Here are some more examples:
 
 ![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_3_n=4r=3.jpg){:height="50%" width="50%"}
 
-Fig. 3.
+**Fig. 3.**
 
 ![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_3_2.jpg){:height="30%" width="30%"}
 
-Fig. 3.1.
+**Fig. 3.1.**
 
 And now we can try a more complex example:
 
 ![n=3, r=3 combinations with repetition]({{ site.url }}{{ site.baseurl }}/images/pascal_triangle/pic_4.jpg){:height="50%" width="50%"}
 
-Fig. 4.
+**Fig. 4.**
 
 Here I’m just calculating costs for all the movements to end up with bricks positioned at last 
 combination, which is [6,6,6,6,6,6,6]. 
