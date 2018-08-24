@@ -9,6 +9,7 @@ combinations with repetition index, calculate combination index using Pascal Tri
  Pascal‘s triangle actual meaning, combinations with repetition to index]
 excerpt: "Data Science, Index by combination, Pascal's Triangle"
 category: data-science
+classes: wide
 ---
 
 ### Problem statement:
