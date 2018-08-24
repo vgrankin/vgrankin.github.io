@@ -82,13 +82,13 @@ is allowed).
 So for example, according to what we discussed above, the total price is 0 at step 1 (no movement was taken)
 
 The total price for step 7 is 6 because:
--	it was necessary to make 3 movements to shift left-most item down (3 because it was 2 shifts down for the right-most item and 1 shift down for the middle one so 3 in total)
+-	it was necessary to make 3 movements to shift left-most item down from where it was (3 because it was 2 shifts down for the right-most item and 1 shift down for the middle one so 3 in total)
 -	it was necessary to make 2 movements to shift middle item down (because we first needed to move right-most item 2 positions down to “allow” middle item to move down).
 -	and right-most item adds 1 unit of cost as well because it is shifted 1 position down to keep ascending order of the combination
 
-So basically combination’s index is its total cost in that table (cost of preceding movements). If we 
-want to start from index 1, we just add 1 to total cost, so index for combination in step 7 will 
-be 7 of course.
+So basically combination’s index is its total cost in that table (cost of preceding movements, 
+gray color values in Fig. 1.). If we want to start from index 1, we just add 1 to total cost, so index for 
+combination in step 7 will be 7 of course.
 
 Let’s see another example, n=3, r=4:
 
