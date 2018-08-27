@@ -305,9 +305,4 @@ I’m sure there are more efficient and optimal ways to do what I described here
 but unfortunately I couldn’t find it so I had to investigate everything myself. But after all it was a very interesting journey! 
 Hopefully it will be useful to you as well!
 
-In my next article I will describe how index by given combination for combinations-with-repetition can
-be useful in data science to potentially get better results at classification problems (this is why I started
-this investigation in first place)! Also, theoretically this Pascal's triangle method can be used to increase training speed of your deep 
-neural network. So stay tuned for that and see you in the next article! :)
-
 Cheers!
